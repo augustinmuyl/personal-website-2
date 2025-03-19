@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import Navbar from "../navbar/navbar";
+import Footer from "../footer/footer";
 
 export default function Background({ children }: { children: ReactNode }) {
     return (
@@ -10,6 +11,9 @@ export default function Background({ children }: { children: ReactNode }) {
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
                     {children}
+                </div>
+                <div className="absolute bottom-10 right-10">
+                    <Footer />
                 </div>
             </div>
         </div>
