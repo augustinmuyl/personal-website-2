@@ -1,6 +1,7 @@
+import { ReactNode } from "react";
 import Navbar from "../navbar/navbar";
 
-export default function Background({ children }) {
+export default function Background({ children }: { children: ReactNode }) {
     return (
         <div className="h-screen p-6">
             <div className="border h-full bg-radial from-[#0F172A] to-black relative">

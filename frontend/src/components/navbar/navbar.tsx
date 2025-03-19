@@ -3,12 +3,13 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [mounted, setMounted] = useState(false);
-    const menuRef = useRef(null);
-    const buttonRef = useRef(null);
+    const menuRef = useRef<HTMLDivElement>(null);
+    const buttonRef = useRef<HTMLButtonElement>(null);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -16,16 +17,19 @@ export default function Navbar() {
     }, []);
 
     useEffect(() => {
-        const handleClickOutside = (event) => {
+        const handleClickOutside = (event: MouseEvent) => {
             if (
                 (buttonRef.current &&
-                    buttonRef.current.contains(event.target)) ||
+                    buttonRef.current.contains(event.target as Node)) ||
                 !isMenuOpen
             ) {
                 return;
             }
 
-            if (menuRef.current && !menuRef.current.contains(event.target)) {
+            if (
+                menuRef.current &&
+                !menuRef.current.contains(event.target as Node)
+            ) {
                 setIsMenuOpen(false);
             }
         };
@@ -36,17 +40,17 @@ export default function Navbar() {
         };
     }, [isMenuOpen]);
 
-    const toggleMenu = (e) => {
+    const toggleMenu = (e: React.MouseEvent) => {
         e.stopPropagation();
         setIsMenuOpen((prev) => !prev);
     };
 
-    const isActive = (path) => {
+    const isActive = (path: string) => {
         if (!mounted) return false;
         return pathname === path;
     };
 
-    const getLinkStyle = (path) => {
+    const getLinkStyle = (path: string) => {
         return isActive(path)
             ? "hover:brightness-75 transition-all font-medium underline"
             : "hover:brightness-75 transition-all";
@@ -55,12 +59,12 @@ export default function Navbar() {
     return (
         <div className="flex justify-between lg:justify-between items-center">
             {/* Mobile */}
-            <a
+            <Link
                 href="/"
                 className="lg:hidden hover:brightness-75 transition-all bg-gradient-to-r from-[#6454F0] to-[#6EE2F5] bg-clip-text text-transparent"
             >
                 AM
-            </a>
+            </Link>
             <motion.button
                 ref={buttonRef}
                 onClick={toggleMenu}
@@ -83,42 +87,45 @@ export default function Navbar() {
                     isMenuOpen ? "" : "hidden"
                 } absolute right-6 top-22 flex flex-col items-center w-fit h-fit p-6 border bg-black rounded-4xl lg:hidden`}
             >
-                <a href="/about" className={getLinkStyle("/about")}>
+                <Link href="/about" className={getLinkStyle("/about")}>
                     About
-                </a>
-                <a href="/experience" className={getLinkStyle("/experience")}>
+                </Link>
+                <Link
+                    href="/experience"
+                    className={getLinkStyle("/experience")}
+                >
                     Experience
-                </a>
-                <a href="/projects" className={getLinkStyle("/projects")}>
+                </Link>
+                <Link href="/projects" className={getLinkStyle("/projects")}>
                     Projects
-                </a>
+                </Link>
             </div>
 
             {/* Large Screens */}
-            <a
+            <Link
                 href="/"
                 className="hidden lg:block hover:brightness-75 transition-all bg-gradient-to-r from-[#6454F0] to-[#6EE2F5] bg-clip-text text-transparent"
             >
                 AM
-            </a>
-            <a
+            </Link>
+            <Link
                 href="/about"
                 className={`hidden lg:block ${getLinkStyle("/about")}`}
             >
                 About
-            </a>
-            <a
+            </Link>
+            <Link
                 href="/experience"
                 className={`hidden lg:block ${getLinkStyle("/experience")}`}
             >
                 Experience
-            </a>
-            <a
+            </Link>
+            <Link
                 href="/projects"
                 className={`hidden lg:block ${getLinkStyle("/projects")}`}
             >
                 Projects
-            </a>
+            </Link>
         </div>
     );
 }
