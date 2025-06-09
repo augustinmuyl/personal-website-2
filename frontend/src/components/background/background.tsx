@@ -14,7 +14,7 @@ export default function Background({ children }: { children: ReactNode }) {
                 animate={{ "--tw-gradient-from": ["#0F172A", "#19213b", "#222b4a"] }}
                 transition={{ duration: 5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
             >
-                <div className="p-10 lg:mx-50 z-10 relative">
+                <div className="p-10 md:mx-28 lg:mx-50 z-10 relative">
                     <Navbar />
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
