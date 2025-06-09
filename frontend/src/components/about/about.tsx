@@ -6,15 +6,15 @@ export default function About() {
     return (
         <Background>
             <div className="flex flex-col justify-center items-center gap-8">
-                <h1 className="text-3xl lg:text-4xl">About Me</h1>
-                <div className="flex flex-col justify-center items-center gap-8 mx-10 sm:max-w-1/2 lg:max-w-3/8">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl">About Me</h1>
+                <div className="flex flex-col justify-center items-center gap-8 mx-12 sm:max-w-1/2 lg:max-w-3/8">
                     <Image
                         src={PFP}
                        alt="globe"
-                        className="rounded-full bg-white size-42"
+                        className="rounded-full bg-white size-32 sm:size-42"
                     />
-                    <p className="text-xs leading-7 tracking-wider">
-                        Hi, I'm Augustin, an undergraduate student at Boston University, where I’m immersing myself in the rigorous world of Mathematics and Computer Science.
+                    <p className="text-[10px] sm:text-xs leading-7 tracking-wider">
+                        Hi, I&#39;m Augustin, an undergraduate student at Boston University, where I&#39;m immersing myself in the rigorous world of Mathematics and Computer Science.
                         I have experience in full-stack development, especially using React.js/Next.js, Tailwind CSS, Flask/FastAPI, and SQL.
                         <br/>
                         <br/>Born to a French father and a Colombian mother, I’ve called six distinct places across North and South America, the Caribbean, and Europe home.

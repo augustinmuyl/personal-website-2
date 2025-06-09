@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Footer() {
     return (
         <div className="flex gap-5 sm:gap-[30px]">
-            <a href="/">
+            <a href="/about">
                 <Image
                     src={Email_Icon}
                     alt="Email"
