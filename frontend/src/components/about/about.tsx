@@ -7,20 +7,19 @@ export default function About() {
         <Background>
             <div className="flex flex-col justify-center items-center gap-8">
                 <h1 className="text-3xl lg:text-4xl">About Me</h1>
-                <div className="flex flex-col justify-center items-center gap-8 mx-10 lg:max-w-3/8">
+                <div className="flex flex-col justify-center items-center gap-8 mx-10 sm:max-w-1/2 lg:max-w-3/8">
                     <Image
                         src={PFP}
-                        alt="globe"
+                       alt="globe"
                         className="rounded-full bg-white size-42"
                     />
                     <p className="text-xs leading-7 tracking-wider">
-                        I’m a Mathematics and Computer Science student at Boston
-                        University with a background in full-stack development,
-                        especially using React (Next.js), Tailwind CSS, Flask,
-                        MongoDB, and PostgreSQL.
-                        <br />
-                        <br />I am passionate about web development an its
-                        intersection with social impact.
+                        Hi, I'm Augustin, an undergraduate student at Boston University, where I’m immersing myself in the rigorous world of Mathematics and Computer Science.
+                        I have experience in full-stack development, especially using React.js/Next.js, Tailwind CSS, Flask/FastAPI, and SQL.
+                        <br/>
+                        <br/>Born to a French father and a Colombian mother, I’ve called six distinct places across North and South America, the Caribbean, and Europe home.
+                        This multicultural upbringing has sharpened my adaptability and given me a nuanced perspective on global collaboration, 
+                        from which I bring a versatile toolkit forged by diverse experiences—and an unwavering passion for bridging cultures through technology.
                     </p>
                 </div>
             </div>
