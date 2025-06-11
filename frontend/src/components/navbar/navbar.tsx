@@ -69,7 +69,7 @@ export default function Navbar() {
             <motion.button
                 ref={buttonRef}
                 onClick={toggleMenu}
-                className="md:hidden text-white absolute right-10 top-12 z-50"
+                className="md:hidden text-white right-10 top-12 z-50"
                 whileTap={{ rotate: 180 }}
             >
                 {isMenuOpen ? <X size={32}/> : <Menu size={32}/>}
@@ -81,7 +81,7 @@ export default function Navbar() {
                         animate={{ x: 0 }}
                         exit={{ x: "100%" }}
                         transition={{ type: "tween", duration: 0.5 }}
-                        className="md:hidden text-white text-2xl fixed left-0 top-0 w-full h-screen bg-[rgba(0,0,0,0.8)] z-20 overflow-hidden flex flex-col justify-center items-center z-40"
+                        className="md:hidden text-white text-2xl fixed left-0 top-0 w-full h-screen bg-[rgba(0,0,0,0.8)] overflow-hidden flex flex-col justify-center items-center z-40"
                     >
                         <motion.p
                             initial={{ x: "100%" }}
