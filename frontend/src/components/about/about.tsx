@@ -10,10 +10,10 @@ export default function About() {
                 <div className="flex flex-col justify-center items-center gap-8 max-w-xl mx-auto px-6">
                     <Image
                         src={PFP}
-                       alt="globe"
+                       alt="PFP"
                         className="rounded-full bg-white size-32 sm:size-42"
                     />
-                    <p className="text-[10px] sm:text-xs leading-7 tracking-wider">
+                    <p className="text-[10px] sm:text-xs lg:text-sm leading-7 tracking-wider">
                         Hi, I&#39;m Augustin, an undergraduate student at Boston University, where I&#39;m immersing myself in the rigorous world of Mathematics and Computer Science.
                         I have experience in full-stack development, especially using React.js/Next.js, Tailwind CSS, Flask/FastAPI, and SQL.
                         <br/>

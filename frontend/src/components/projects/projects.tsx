@@ -22,29 +22,28 @@ export default function Projects() {
                         >
                             <motion.div
                                 className="w-full p-8 border-2 bg-gradient-to-bl from-slate-800 to-slate-900 rounded-3xl shadow max-w-64 md:max-w-80 xl:max-w-96"
-                                variants={{
-                                    hidden: { opacity: 0, x: -50 },
-                                    visible: {
-                                        opacity: 1,
-                                        x: 0,
-                                        transition: {
-                                            duration: 0.75,
-                                            type: "spring",
-                                            stiffness: 200,
-                                            damping: 10,
-                                        },
-                                    },
+                                initial= {{ opacity: 0, x: -50 }}
+                                animate= {{
+                                    opacity: 1,
+                                    x: 0,
+                                    transition: {
+                                        duration: 0.75,
+                                        type: "spring",
+                                        stiffness: 200,
+                                        damping: 10,
+                                        delay: 0.3
+                                    }
                                 }}
                             >
                                 <Image
                                     src={Linkedin_Logo}
                                     alt="OutreachOutlet"
-                                    className="rounded-xl mb-6"
+                                    className="rounded-xl mb-3 sm:mb-4 lg:mb-5"
                                 />
-                                <h1 className="text-lg sm:text-xl md:text-2xl xl:text-3xl font-bold mb-0 sm:mb-[2px] md:mb-1 xl:mb-2">
+                                <h1 className="text-lg sm:text-xl lg:text-2xl mb-1 sm:mb-[2px] md:mb-1 xl:mb-2">
                                     OutreachOutlet
                                 </h1>
-                                <p className="text-xs/5 sm:text-sm/6 md:text-base/7 xl:text-lg/7 tracking-wider">
+                                <p className="text-[10px] sm:text-xs lg:text-sm leading-5 md:leading-6 lg:leading-7 tracking-wider">
                                     Web app that matches users with available
                                     volunteering opportunities aligned with their
                                     interests
