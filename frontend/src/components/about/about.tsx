@@ -7,7 +7,7 @@ export default function About() {
         <Background>
             <div className="flex flex-col justify-center items-center gap-8 overflow-auto">
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl">About Me</h1>
-                <div className="flex flex-col justify-center items-center gap-8 mx-12 sm:max-w-1/2 lg:max-w-3/8">
+                <div className="flex flex-col justify-center items-center gap-8 max-w-xl mx-auto px-6">
                     <Image
                         src={PFP}
                        alt="globe"

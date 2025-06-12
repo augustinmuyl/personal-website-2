@@ -7,7 +7,7 @@ import { motion } from "motion/react"
 
 export default function Background({ children }: { children: ReactNode }) {
     return (
-        <div className="h-screen p-6">
+        <div className="h-[100dvh] p-6">
             <motion.div
                 className="border h-full flex flex-col overflow-hidden"
                 style={{
