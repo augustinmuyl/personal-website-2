@@ -8,11 +8,21 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
+//import { StaticImageData } from "next/image";
 import { experiences } from "../../constants";
-import { motion, useInView } from "motion/react";
-import { useRef, useState, useEffect } from "react";
+import { motion } from "motion/react";
+import { useRef } from "react";
 
-function ExperienceCard({ experience, index }) {
+//type Experience = {
+//    title: string,
+//        company: string,
+//        date: string,
+//        icon: any,
+//        description: Array<string>
+//}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function ExperienceCard({ experience }: {experience: any}) {
     return (
         <VerticalTimelineElement
             contentStyle={{
@@ -43,7 +53,7 @@ function ExperienceCard({ experience, index }) {
             </div>
 
             <ul className="list-disc ml-5 tracking-wider text-white text-xs/5 sm:text-sm/6 md:text-base/7 xl:text-lg/7 mt-4 space-y-2">
-                {experience.description.map((description, index) => (
+                {experience.description.map((description: Array<string>, index: number) => (
                     <li key={index}>{description}</li>
                 ))}
             </ul>
@@ -53,18 +63,6 @@ function ExperienceCard({ experience, index }) {
 
 export default function Experience() {
     const sectionRef = useRef(null);
-    const [hasBeenVisible, setHasBeenVisible] = useState(false);
-
-    const isInView = useInView(sectionRef, {
-        triggerOnce: true,
-        amount: 0.8,
-    });
-
-    useEffect(() => {
-        if (isInView && !hasBeenVisible) {
-            setHasBeenVisible(true);
-        }
-    }, [isInView, hasBeenVisible]);
 
     return (
         <Background>
@@ -73,8 +71,7 @@ export default function Experience() {
                 ref={sectionRef}
                 id="experience"
                 className={`scroll-mt-24 mt-16  flex justify-center items-center pt-36 pb-10 sm:pb-12 md:pb-14 xl:pb-20 text-2xl sm:text-3xl lg:text-4xl`}
-                initial="hidden"
-                animate={hasBeenVisible ? "visible" : "hidden"}
+                initial="visible"
                 variants={{
                     hidden: { opacity: 0, y: 100 },
                     visible: {
