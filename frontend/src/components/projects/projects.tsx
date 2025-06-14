@@ -13,7 +13,7 @@ export default function Projects() {
         <Background>
             <div className="flex flex-col justify-center items-center gap-10">
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl">Projects</h1>
-                <div className="flex flex-col md:flex-row justify-center items-center gap-10">
+                <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-10">
                     <Tilt>
                         <a
                             href="https://www.outreachoutlet.org/"
@@ -22,7 +22,7 @@ export default function Projects() {
                             className="flex flex-col text-white"
                         >
                             <motion.div
-                                className="w-full p-8 border-2 bg-gradient-to-bl from-slate-800 to-slate-900 rounded-3xl shadow max-w-64 md:max-w-80 xl:max-w-96"
+                                className="w-full p-8 border bg-gradient-to-bl from-slate-800 to-slate-900 rounded-3xl shadow max-w-64 md:max-w-80 xl:max-w-96"
                                 initial= {{ opacity: 0, x: -50 }}
                                 animate= {{
                                     opacity: 1,
@@ -60,7 +60,7 @@ export default function Projects() {
                             className="flex flex-col text-white"
                         >
                             <motion.div
-                                className="w-full p-8 border-2 bg-gradient-to-bl from-slate-800 to-slate-900 rounded-3xl shadow max-w-64 md:max-w-80 xl:max-w-96"
+                                className="w-full p-8 border bg-gradient-to-bl from-slate-800 to-slate-900 rounded-3xl shadow max-w-64 md:max-w-80 xl:max-w-96"
                                 initial= {{ opacity: 0, x: -50 }}
                                 animate= {{
                                     opacity: 1,
