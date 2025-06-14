@@ -23,7 +23,7 @@ export default function Background({ children }: { children: ReactNode }) {
                     ease: "easeInOut"
                 }}
             >
-                <div className="p-10 md:mx-28 lg:mx-50 z-10 relative shrink-0">
+                <div className="p-10 md:mx-28 lg:mx-50 relative shrink-0">
                     <Navbar />
                 </div>
                 <main className="flex-grow overflow-auto relative">
