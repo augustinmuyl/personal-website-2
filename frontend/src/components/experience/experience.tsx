@@ -44,7 +44,7 @@ function ExperienceCard({ experience }: {experience: any}) {
             iconClassName="bg-white"
         >
             <div>
-                <h1 className="text-lg sm:text-xl md:text-2xl xl:text-3xl font-bold">
+                <h1 className="text-lg sm:text-xl md:text-2xl xl:text-3xl">
                     {experience.title}
                 </h1>
                 <p className="text-violet-200/50" style={{ margin: 0 }}>
@@ -52,7 +52,7 @@ function ExperienceCard({ experience }: {experience: any}) {
                 </p>
             </div>
 
-            <ul className="list-disc ml-5 tracking-wider text-white text-xs/5 sm:text-sm/6 md:text-base/7 xl:text-lg/7 mt-4 space-y-2">
+            <ul className="list-disc ml-5 tracking-wider text-xs/5 sm:text-sm/6 md:text-base/7 xl:text-lg/7 mt-4 space-y-2">
                 {experience.description.map((description: Array<string>, index: number) => (
                     <li key={index}>{description}</li>
                 ))}
@@ -67,22 +67,7 @@ export default function Experience() {
     return (
         <Background>
             <div className="flex flex-col justify-center items-center gap-8 w-full overflow-auto">
-                <motion.h1
-                ref={sectionRef}
-                id="experience"
-                className={`scroll-mt-24 mt-16  flex justify-center items-center pt-36 pb-10 sm:pb-12 md:pb-14 xl:pb-20 text-2xl sm:text-3xl lg:text-4xl`}
-                initial="visible"
-                variants={{
-                    hidden: { opacity: 0, y: 100 },
-                    visible: {
-                        opacity: 1,
-                        y: 0,
-                        transition: { duration: 0.5 },
-                    },
-                }}
-            >
-                Experience
-            </motion.h1>
+                <h1 className={`text-2xl sm:text-3xl lg:text-4xl`}>Experience</h1>
             <VerticalTimeline>
                 {experiences.map((experience, index) => (
                     <ExperienceCard
