@@ -10,8 +10,6 @@ import "react-vertical-timeline-component/style.min.css";
 
 //import { StaticImageData } from "next/image";
 import { experiences } from "../../constants";
-import { motion } from "motion/react";
-import { useRef } from "react";
 
 //type Experience = {
 //    title: string,
@@ -62,8 +60,6 @@ function ExperienceCard({ experience }: {experience: any}) {
 }
 
 export default function Experience() {
-    const sectionRef = useRef(null);
-
     return (
         <Background>
             <div className="flex flex-col justify-center items-center gap-8 w-full overflow-auto">
