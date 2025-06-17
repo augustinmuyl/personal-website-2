@@ -10,6 +10,7 @@ import "react-vertical-timeline-component/style.min.css";
 
 //import { StaticImageData } from "next/image";
 import { experiences } from "../../constants";
+import { styles } from "@/app/styles";
 
 //type Experience = {
 //    title: string,
@@ -20,7 +21,7 @@ import { experiences } from "../../constants";
 //}
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function ExperienceCard({ experience }: {experience: any}) {
+function ExperienceCard({ experience }: { experience: any }) {
     return (
         <VerticalTimelineElement
             contentStyle={{
@@ -50,7 +51,7 @@ function ExperienceCard({ experience }: {experience: any}) {
                 </p>
             </div>
 
-            <ul className="list-disc ml-5 tracking-wider text-xs/5 sm:text-sm/6 md:text-base/7 xl:text-lg/7 mt-4 space-y-2">
+            <ul className={`${styles.bodyText} leading-5 md:leading-6 lg:leading-7 list-disc ml-5 tracking-wider mt-4 space-y-2`}>
                 {experience.description.map((description: Array<string>, index: number) => (
                     <li key={index}>{description}</li>
                 ))}
@@ -63,15 +64,15 @@ export default function Experience() {
     return (
         <Background>
             <div className="flex flex-col justify-center items-center gap-8 w-full overflow-auto">
-                <h1 className={`text-2xl sm:text-3xl lg:text-4xl`}>Experience</h1>
-            <VerticalTimeline>
-                {experiences.map((experience, index) => (
-                    <ExperienceCard
-                        experience={experience}
-                        key={index}
-                    ></ExperienceCard>
-                ))}
-            </VerticalTimeline>
+                <h1 className={styles.titleText}>Experience</h1>
+                <VerticalTimeline>
+                    {experiences.map((experience, index) => (
+                        <ExperienceCard
+                            experience={experience}
+                            key={index}
+                        ></ExperienceCard>
+                    ))}
+                </VerticalTimeline>
             </div>
         </Background>
     );
