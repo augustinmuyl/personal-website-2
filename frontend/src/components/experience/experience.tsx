@@ -43,10 +43,10 @@ function ExperienceCard({ experience }: { experience: any }) {
             iconClassName="bg-white"
         >
             <div>
-                <h1 className="text-lg sm:text-xl md:text-2xl xl:text-3xl">
+                <h1 className="text-lg sm:text-xl lg:text-2xl">
                     {experience.title}
                 </h1>
-                <p className="text-violet-200/50" style={{ margin: 0 }}>
+                <p className="text-violet-200/60" style={{ margin: 0 }}>
                     {experience.company}
                 </p>
             </div>
