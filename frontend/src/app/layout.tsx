@@ -3,8 +3,18 @@ import "./globals.css";
 import { Inter } from "next/font/google"
 
 export const metadata: Metadata = {
-    title: "Augustin's Personal Website",
-    description: "Hi, I'm a Math and Computer Science student at Boston University with a background in full-stack development, especially using Flask/FastAPI, React.js/Next.JS, Tailwind CSS, and SQL",
+    title: "Augustin Muyl - Math & CS Student, Full-Stack Developer",
+    description: "I'm Augustin, a Math & CS student building full-stack apps with React, Next.js, FastAPI, and SQL. Explore my portfolio and past projects.",
+    openGraph: {
+        title: "Augustin Muyl – Math & CS Student, Full-Stack Developer",
+        description:
+            "Explore the portfolio of Augustin Muyl, a Math & CS student passionate about impactful, full-stack development using React, Next.js, and FastAPI.",
+        url: "https://augustinmuyl.com",
+        type: "website",
+    },
+    other: {
+        "google-site-verification": "QRq3mt4oDRYX-iD63Jgqn4jwU-BybcobJZ-tBbg4ar4"
+    }
 };
 
 const inter = Inter({
