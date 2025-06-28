@@ -1,7 +1,5 @@
 # Personal Website
 
-In development.
-
 A centralized portfolio website to showcase different things I've done throughout the years.
 
 ## Technologies
